@@ -1,9 +1,10 @@
 const pixelArray = []
-const width = 2
-const heigth = 3
+const width = 10
+const heigth = 10
 
 function start(){
     createDataStructure()
+    createSource()
     render()
     console.log(pixelArray)
 }
@@ -25,8 +26,10 @@ function render(){
         html += '<tr>'
         for(let column = 0; column < width; column++){
             const pixelIndex = column + (width * row)
+            const intensity = pixelArray[pixelIndex]
             html += '<td>'
-            html += pixelIndex
+            html += `<div class="pixel-index">${pixelIndex}</div>`
+            html += intensity
             html += '</td>'
         }
         html += '</tr>'
@@ -35,4 +38,11 @@ function render(){
     document.querySelector('#canvas').innerHTML = html
 }
 
+function createSource(){
+    for(let column = 0; column <= width; column++){
+        const overflowPixelIndex = width * heigth
+        const pixelIndex = (overflowPixelIndex - width) + column
+        pixelArray[pixelIndex] = 36
+    }
+}
 start()
