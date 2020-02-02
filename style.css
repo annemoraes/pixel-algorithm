@@ -21,3 +21,9 @@ td{
     right: 2px;
     color: #999;
 }
+
+.td{
+    width: 4px;
+    height: 4px;
+    border: 0;
+}
