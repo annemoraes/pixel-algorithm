@@ -33,10 +33,10 @@ function updateIntensityPerPixel(currentPixelIndex){
     if(belowPixelIndex >= width * heigth){
         return
     }
-    const decay = 1
+    const decay = Math.floor(Math.random()* 3)
     const belowPixelIntensity = pixelArray[belowPixelIndex]
     const newIntensity = belowPixelIntensity - decay >= 0 ? belowPixelIntensity - decay : 0
-    pixelArray[currentPixelIndex] = newIntensity
+    pixelArray[currentPixelIndex - decay] = newIntensity
 }
 
 function render(){
