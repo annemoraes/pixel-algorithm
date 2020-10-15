@@ -1,8 +1,7 @@
 # pixel-algorithm
 
-Estudo de manipulação de pixels para simular fogo. 
+Estudo de manipulação de pixels para simulação de fogo usando javascript.
 
-###### Resultado
-![Fogo](https://raw.githubusercontent.com/annemoraes/pixel-algorithm/master/fire.gif)
-
-
+<p align="center">
+  <img alt="Fire" title="#Fire" src="fire.gif" >
+</p>
